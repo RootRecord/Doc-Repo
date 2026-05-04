@@ -32,7 +32,7 @@ This repository is meant to **teach**. It is not a substitute for runbooks insid
 - [Weather Manager](docs/02-products/weather-manager.md)
 - [Token Manager (mobile)](docs/02-products/token-manager.md)
 - [Account Hub](docs/02-products/account-hub.md)
-- [Marketing website (rootrecord.info)](docs/02-products/marketing-website.md)
+- [Marketing website](docs/02-products/marketing-website.md) — [rootrecord.info](https://rootrecord.info)
 
 ### 3. Platform
 
