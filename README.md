@@ -72,7 +72,7 @@ Short definitions so search and assistants can anchor terms to RootRecord withou
 
 ---
 
-## Table of contents (Sections 0–11)
+## Table of contents (Sections 0–12)
 
 Each section below includes a **one-line summary** (knowledge snippet) so crawlers and models can extract intent without only seeing a hollow heading.
 
@@ -119,15 +119,29 @@ Describes JWT-style sessions, Stripe-backed billing surfaces, and how to talk ab
 - [Billing & licensing](docs/04-accounts/billing-and-licensing.md)
 - [Privacy & security posture](docs/04-accounts/privacy-and-security.md)
 
-### 5. Solana — tools & infrastructure
+### 5. Solana — Create a Solana token, liquidity & on-chain tools
 
-RootRecord runs Solana-adjacent product surfaces: non-custodial Token Manager flows, optional custodial program mechanics in the Worker, and the public **Solana Tools** stack. Use the live dashboard at **[solana.rootrecord.info](https://solana.rootrecord.info)** for the supported browser UX.
+The live stack at **[solana.rootrecord.info](https://solana.rootrecord.info)** is built for **“create Solana token”** intent: SPL & Token-2022 mints, Raydium CPMM liquidity, and the full `/tools` suite—plus mobile **Token Manager** for wallet-first workflows. Custodial Worker surfaces exist for specific programs; otherwise you **sign** with your wallet.
+
+#### Quick start: How to create a Solana token with RootRecord
+
+1. Open **[solana.rootrecord.info](https://solana.rootrecord.info)**.
+2. Connect a Solana wallet (**Phantom**, **Backpack**, or another supported wallet).
+3. Go to **[Create](https://solana.rootrecord.info/create)** and enter **name**, **symbol**, and **decimals** (optional logo / metadata).
+4. Review fees, then deploy your **SPL token**—**sign** the transaction in your wallet. RootRecord never asks for seed phrases.
 
 - [Solana in the RootRecord stack](docs/05-solana/solana-ecosystem.md)
 - [Solana Tools public site](docs/05-solana/solana-tools-site.md)
 - Ecosystem index: [`solana.json`](solana.json) (programs, neighbor APIs, versioned tx notes)
 
-### 6. Development — clone, branch, build
+### 6. Token management — Create and manage Solana tokens
+
+Answers **“how do I create or manage a Solana token?”** across **browser Solana Tools** (mint + authorities + liquidity) and the **Token Manager** Android app—instructional paths, not theory.
+
+- [Token Manager (mobile)](docs/02-products/token-manager.md)
+- [Solana Tools public site](docs/05-solana/solana-tools-site.md) — live **[`/create`](https://solana.rootrecord.info/create)**
+
+### 7. Development — clone, branch, build
 
 Branch conventions (`main`, `weather-work`, `business-work`), `pnpm` vs `npm ci`, Capacitor Android outputs, and Worker deploy paths.
 
@@ -136,14 +150,14 @@ Branch conventions (`main`, `weather-work`, `business-work`), `pnpm` vs `npm ci`
 - [Mobile build & release](docs/06-development/build-and-release-mobile.md)
 - [Web Workers & Pages deploy](docs/06-development/build-and-deploy-web.md)
 
-### 7. Operations — crons & telemetry
+### 8. Operations — crons & telemetry
 
 Scheduled NOAA ingest, account cleanup, treasury triggers, and structured Worker logging that operators rely on when users report drift.
 
 - [Crons & background jobs](docs/07-operations/crons-and-background-jobs.md)
 - [Observability](docs/07-operations/observability.md)
 
-### 8. Tutorials — journeys & fixes
+### 9. Tutorials — journeys & fixes
 
 End-user onboarding narrative, engineer bootstrapping, and a troubleshooting ladder for login, weather staleness, and Solana RPC errors.
 
@@ -151,14 +165,14 @@ End-user onboarding narrative, engineer bootstrapping, and a troubleshooting lad
 - [Developer onboarding](docs/08-tutorials/developer-onboarding.md)
 - [Troubleshooting](docs/08-tutorials/troubleshooting.md)
 
-### 9. Reference — FAQ & quick lookup
+### 10. Reference — FAQ & quick lookup
 
 Compact answers plus **dense tables** for endpoints, repos, and integrations—optimized for search snippets.
 
 - [FAQ](docs/09-reference/faq.md)
 - [Quick reference](docs/09-reference/quick-reference.md)
 
-### 10. Deep dives — architecture & mechanics
+### 11. Deep dives — architecture & mechanics
 
 Longer explainers: Mermaid map, HTTP lifecycle in the Worker, earn semantics, FCM, Stripe, D1 migrations, and version floors for Android.
 
@@ -177,7 +191,7 @@ Longer explainers: Mermaid map, HTTP lifecycle in the Worker, earn semantics, FC
 - [Version policy](docs/10-deep-dives/version-policy.md)
 - [Feedback & Discord](docs/10-deep-dives/feedback-and-discord.md)
 
-### 11. For educators — workshops & quizzes
+### 12. For educators — workshops & quizzes
 
 Ready-made session outline and self-check questions for internal training.
 

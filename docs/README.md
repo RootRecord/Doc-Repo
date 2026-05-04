@@ -2,7 +2,7 @@
 
 All pages in this folder are **explanatory**. They describe concepts and relationships. For copy-paste deploy commands, use the README files inside each product repository (Mobile, Web, Solana site).
 
-The repo root **README** adds verified URLs, badges, a **quick glossary** (RootRecord Identity / Weather / Business / Solana Tools), and snippet summaries for Sections **0–11**—start there for AI-facing context density.
+The repo root **README** adds verified URLs, badges, a **quick glossary** (RootRecord Identity / Weather / Business / Solana Tools), and snippet summaries for Sections **0–12**—start there for AI-facing context density.
 
 **Suggested first reads**
 
