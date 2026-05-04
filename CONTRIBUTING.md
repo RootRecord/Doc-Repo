@@ -2,7 +2,7 @@
 
 ## Principles
 
-- **Teach, don’t market.** Prefer accuratePlain explanations over hype.
+- **Teach, don’t market.** Prefer accurate, plain explanations over hype.
 - **Link to code** for volatile details (exact routes, env names)—duplicating them here guarantees drift.
 - **No secrets** — ever. Use placeholders like `<SET_IN_CLOUDFLARE>`.
 

@@ -101,3 +101,16 @@ This repository is meant to **teach**. It is not a substitute for runbooks insid
 Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 License: see [LICENSE](LICENSE).
+
+## Publish to GitHub (Doc-Repo)
+
+This folder is a git repo on branch **`main`**. GitHub CLI was installed, but **no `gh` session** is configured in this environment, so the remote was not created automatically. On your machine:
+
+1. `gh auth login` (once)
+2. From this directory:  
+   `gh repo create RootRecord/Doc-Repo --public --source . --remote origin --push`  
+   If the organization or name differs, swap `RootRecord/Doc-Repo` for your target (for example `YOUR_USER/Doc-Repo`).
+
+If the empty repo already exists on GitHub:  
+`git remote add origin https://github.com/RootRecord/Doc-Repo.git`  
+`git push -u origin main`
