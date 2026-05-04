@@ -19,6 +19,8 @@ This repository is meant to **teach**. It is not a substitute for runbooks insid
 | Solana Tools (public Next.js app) | [solana.rootrecord.info](https://solana.rootrecord.info) |
 | This documentation repo | [github.com/RootRecord/Doc-Repo](https://github.com/RootRecord/Doc-Repo) |
 
+**One-page lookup:** [Quick reference](docs/09-reference/quick-reference.md) (URLs, repos, integration matrix, GitHub topic tags).
+
 ---
 
 ## Quick glossary (brand ↔ meaning)
@@ -76,12 +78,13 @@ Covers **Business Manager**, **Weather Manager**, **Token Manager**, **Account H
 
 ### 3. Platform — APIs, Workers, data
 
-Documents **`api.rootrecord.info`**, Cloudflare Worker responsibilities, D1 usage, and how domains route traffic.
+Documents **`api.rootrecord.info`**, Cloudflare Worker responsibilities, D1 usage, domain routing, and **third-party integration boundaries** (Stripe, FCM, Solana RPC, weather ingest, Discord).
 
 - [API & services overview](docs/03-platform/api-overview.md)
 - [Cloudflare Workers](docs/03-platform/cloudflare-workers.md)
 - [Data & storage model](docs/03-platform/data-and-storage.md)
 - [Domains & URLs](docs/03-platform/domains-and-urls.md)
+- [Integrations & external systems](docs/03-platform/integrations.md)
 
 ### 4. Accounts — auth, billing, privacy
 
@@ -122,11 +125,12 @@ End-user onboarding narrative, engineer bootstrapping, and a troubleshooting lad
 - [Developer onboarding](docs/08-tutorials/developer-onboarding.md)
 - [Troubleshooting](docs/08-tutorials/troubleshooting.md)
 
-### 9. Reference — FAQ
+### 9. Reference — FAQ & quick lookup
 
-Compact answers to “what is RootRecord?”, “where is the API?”, and repo topology questions.
+Compact answers plus **dense tables** for endpoints, repos, and integrations—optimized for search snippets.
 
 - [FAQ](docs/09-reference/faq.md)
+- [Quick reference](docs/09-reference/quick-reference.md)
 
 ### 10. Deep dives — architecture & mechanics
 
@@ -161,6 +165,9 @@ Ready-made session outline and self-check questions for internal training.
 | Feature | Target | Status |
 |--------|--------|--------|
 | Clickable URLs | All primary hosts use markdown links (`rootrecord.info`, `api.*`, `solana.*`) | README ✓ (spot-check child docs periodically) |
+| Topic tags | GitHub **About → Topics** mirror ecosystem keywords (`solana`, `cloudflare`, `android`, …) | Repo sidebar ✓ + listed in [quick reference](docs/09-reference/quick-reference.md) |
+| Quick reference | Single doc for URLs + integrations matrix | [quick-reference.md](docs/09-reference/quick-reference.md) ✓ |
+| Integration detail | Stripe, Cloudflare, FCM, Solana, weather ingest, Discord | [integrations.md](docs/03-platform/integrations.md) ✓ |
 | Live validation | Badges + verified links table | README ✓ |
 | CI signal | GitHub Actions workflow on `main` | [.github/workflows/ci.yml](.github/workflows/ci.yml) |
 | Images / diagrams | When adding assets, use meaningful `alt` text (e.g. `alt="RootRecord architecture diagram"`) | Add when assets ship |
