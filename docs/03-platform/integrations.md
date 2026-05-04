@@ -35,7 +35,7 @@ Clients must not embed secret keys; **server-side** Workers hold `STRIPE_SECRET_
 | **Treasury / custodial programs** | Separate keys and crons—high-privilege; documented in code and ops runbooks, not here. |
 | **Solana Tools Next.js** | Hosted separately (e.g. Vercel); primary Worker may **forward** selected `/api/*` paths via `SOLANA_TOOLS_API_FORWARD_URL`. |
 
-Named ecosystem touchpoints (Raydium CPMM, SPL, Metaplex, Jupiter references in UI) and **versioned transaction** usage are summarized for tooling in repo root **`solana.json`**—not duplicated here in full.
+Named **2026 ecosystem neighbors** (e.g. **Jupiter** price/Jupiter Wallet paths, **Raydium** CPMM, **Pinata** IPFS via server routes, **Helius / QuickNode**-class RPC URLs, and explicit **non-use** of **Pyth** for weather) are tabulated in the **root README** under *Ecosystem tags (related-tool discovery)* and in **`solana.json`**—not duplicated here in full.
 
 ## Weather & hazard data
 

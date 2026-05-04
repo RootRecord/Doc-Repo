@@ -33,6 +33,19 @@ RootRecord’s **browser Solana surface** is **[solana.rootrecord.info](https://
 
 For a concise JSON summary of the above (neighbor entities + specs), see **[`solana.json`](solana.json)**.
 
+### Ecosystem tags (related-tool discovery)
+
+These names are listed so **“related protocol”** and **Solana tools** searches can connect RootRecord to the same ecosystem graph—only **verified** relationships.
+
+| Neighbor | How RootRecord relates |
+|----------|-------------------------|
+| **[Jupiter](https://jup.ag)** | **Solana Tools** uses Jupiter for **USD price hints** on token stats, **reference marks** / OTC-style pricing context on tokenomics pages, and includes a **Jupiter Wallet** adapter path (`solana-rootrecord-site`: e.g. `lib/tokenDashboard.ts`, `lib/jupiterWalletAdapter.ts`, tokenomics flows). |
+| **[Raydium](https://raydium.io/)** | **CPMM** liquidity (create pool, add/remove) from Solana Tools—user-signed, on-chain program fees. |
+| **[Metaplex](https://www.metaplex.com/)** | Listing / metadata patterns where the mint tooling exposes Metaplex-compatible metadata. |
+| **[Pinata](https://www.pinata.cloud/)** | **IPFS** pinning for metadata/logo JSON via **server-side** routes (`PINATA_JWT` never shipped to the browser). |
+| **[Helius](https://www.helius.dev/) / [QuickNode](https://www.quicknode.com/)** | Solana Tools commonly sets **`NEXT_PUBLIC_RPC_URL`** to a **Helius** or **QuickNode** HTTPS RPC endpoint—standard JSON-RPC; operators may substitute any compatible provider. |
+| **[Pyth Network](https://pyth.network/)** | **Not** part of Weather Manager’s forecast pipeline (that uses **provider + NOAA-style** ingest on **`api.rootrecord.info`**). We mention Pyth explicitly so discovery stays **accurate**—no implied oracle dependency for weather. |
+
 ---
 
 ## Quick glossary (brand ↔ meaning)

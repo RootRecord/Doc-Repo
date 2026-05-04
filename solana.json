@@ -32,7 +32,21 @@
     "aggregatorsAndApis": [
       {
         "name": "Jupiter",
-        "usage": "Price hints and routing references in Solana Tools UI/docs—not the data source for Weather Manager (weather is off-chain APIs)."
+        "usage": "USD price hints on token dashboards, OTC/mark references on tokenomics, Jupiter Wallet adapter—Solana Tools (see solana-rootrecord-site). Not used for Weather Manager data."
+      }
+    ],
+    "rpcAndInfrastructure": [
+      {
+        "name": "Helius",
+        "relationship": "Often used as NEXT_PUBLIC_RPC_URL (HTTPS Solana JSON-RPC) for solana.rootrecord.info deployments."
+      },
+      {
+        "name": "QuickNode",
+        "relationship": "Alternative HTTPS RPC provider for the same NEXT_PUBLIC_RPC_URL pattern."
+      },
+      {
+        "name": "Pinata",
+        "relationship": "Server-side IPFS pinning for Metaplex-compatible metadata uploads (PINATA_JWT); never exposed to the browser."
       }
     ],
     "notUsedForWeather": [
