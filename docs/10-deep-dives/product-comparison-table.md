@@ -13,3 +13,4 @@ Use this table in decks—update when SKUs change.
 ## Related reading
 
 - [../02-products/overview.md](../02-products/overview.md)
+- [Compare RootRecord — Solana tools vs legacy launchers](compare-rootrecord-solana-tools.md) (token creator positioning)

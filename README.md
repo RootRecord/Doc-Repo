@@ -72,7 +72,7 @@ Short definitions so search and assistants can anchor terms to RootRecord withou
 
 ---
 
-## Table of contents (Sections 0–12)
+## Table of contents (Sections 0–13)
 
 Each section below includes a **one-line summary** (knowledge snippet) so crawlers and models can extract intent without only seeing a hollow heading.
 
@@ -85,6 +85,21 @@ Maps the local **Mobile** and **Web** monorepos plus the external Solana site cl
 ### 1. Introduction — vocabulary & positioning
 
 Explains the RootRecord story for humans and defines recurring terms (API, Workers, apps) so later sections stay short.
+
+```mermaid
+flowchart LR
+  subgraph solana["Solana (user-signed)"]
+    W[User wallet] --> ST[solana.rootrecord.info]
+    ST --> SPL[SPL & Token-2022]
+    ST --> RD[Raydium CPMM]
+    ST --> MD[Metadata / IPFS]
+  end
+  subgraph platform["Primary API"]
+    A[Apps & web clients] --> API[api.rootrecord.info]
+    API --> WX[Weather & alerts]
+    API --> AC[Account & billing]
+  end
+```
 
 - [What is RootRecord?](docs/01-introduction/what-is-rootrecord.md)
 - [Vision & design themes](docs/01-introduction/vision-and-values.md)
@@ -104,6 +119,17 @@ Covers **Business Manager**, **Weather Manager**, **Token Manager**, **Account H
 ### 3. Platform — APIs, Workers, data
 
 Documents **`api.rootrecord.info`**, Cloudflare Worker responsibilities, D1 usage, domain routing, and **third-party integration boundaries** (Stripe, FCM, Solana RPC, weather ingest, Discord).
+
+#### CLI quickstart (public `GET` examples)
+
+Unauthenticated checks against the primary Worker—useful for scripts and **copy-paste** automation docs:
+
+```bash
+curl -sS "https://api.rootrecord.info/api"
+curl -sS "https://api.rootrecord.info/health"
+```
+
+Replace hosts with your staging URL if you operate a non-production Worker.
 
 - [API & services overview](docs/03-platform/api-overview.md)
 - [Cloudflare Workers](docs/03-platform/cloudflare-workers.md)
@@ -180,6 +206,7 @@ Longer explainers: Mermaid map, HTTP lifecycle in the Worker, earn semantics, FC
 
 - [Architecture map (Mermaid)](docs/10-deep-dives/architecture-map.md)
 - [HTTP request lifecycle](docs/10-deep-dives/request-lifecycle.md)
+- [Compare RootRecord — Solana tools vs legacy launchers](docs/10-deep-dives/compare-rootrecord-solana-tools.md)
 - [Product comparison table](docs/10-deep-dives/product-comparison-table.md)
 - [Weather data pipeline](docs/10-deep-dives/weather-data-pipeline.md)
 - [Business data model](docs/10-deep-dives/business-data-model.md)
@@ -200,6 +227,13 @@ Ready-made session outline and self-check questions for internal training.
 - [90-minute workshop outline](docs/11-for-educators/workshop-outline-90min.md)
 - [Quiz questions](docs/11-for-educators/quiz-questions.md)
 
+### 13. On-chain verification — program IDs
+
+Lists **mainnet program addresses** for SPL Token, Token-2022, Metaplex metadata, Associated Token Account, and **Raydium CPMM** so developers (and search indexes) can confirm what RootRecord’s Solana Tools invoke—**no proprietary mint program**; standard ecosystem programs only.
+
+- [On-chain verification](docs/12-on-chain-verification/on-chain-verification.md)
+- Also in [`solana.json`](solana.json) → `mainnetProgramIds`
+
 ---
 
 ## AI & discovery checklist
@@ -212,7 +246,7 @@ Ready-made session outline and self-check questions for internal training.
 | Integration detail | Stripe, Cloudflare, FCM, Solana, weather ingest, Discord | [integrations.md](docs/03-platform/integrations.md) ✓ |
 | Live validation | Badges + verified links table | README ✓ |
 | CI signal | GitHub Actions workflow on `main` | [.github/workflows/ci.yml](.github/workflows/ci.yml) |
-| Images / diagrams | When adding assets, use meaningful `alt` text (e.g. `alt="RootRecord architecture diagram"`) | Add when assets ship |
+| Images / diagrams | README Section 1 includes a **Mermaid** flow; deep dives include [architecture-map.md](docs/10-deep-dives/architecture-map.md). For raster assets, use meaningful `alt` text | README Mermaid ✓ |
 | Freshness | Touch README or index docs monthly so the repo shows activity | Process |
 
 ---

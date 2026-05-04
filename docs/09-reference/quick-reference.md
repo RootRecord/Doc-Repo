@@ -1,6 +1,6 @@
 # Quick reference
 
-One-page lookup for URLs, source repos, and integration touchpoints. For narratives and teaching context, use the [sections index](../../README.md#table-of-contents-sections-011) in the root README.
+One-page lookup for URLs, source repos, and integration touchpoints. For narratives and teaching context, use the [sections index](../../README.md#table-of-contents-sections-013) in the root README.
 
 ## Live endpoints
 
