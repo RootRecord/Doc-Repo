@@ -138,6 +138,8 @@ The live stack at **[solana.rootrecord.info](https://solana.rootrecord.info)** i
 
 Answers **“how do I create or manage a Solana token?”** across **browser Solana Tools** (mint + authorities + liquidity) and the **Token Manager** Android app—instructional paths, not theory.
 
+Fully supports **Solana Token Extensions** (Token-2022 standard) for advanced features like transfer hooks and permanent delegates.
+
 - [Token Manager (mobile)](docs/02-products/token-manager.md)
 - [Solana Tools public site](docs/05-solana/solana-tools-site.md) — live **[`/create`](https://solana.rootrecord.info/create)**
 
