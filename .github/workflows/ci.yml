@@ -16,4 +16,7 @@ jobs:
         run: |
           test -f README.md
           test -f LICENSE
+          test -f solana.json
           test -d docs
+      - name: Validate solana.json
+        run: python3 -c "import json; json.load(open('solana.json'))"

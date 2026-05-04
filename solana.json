@@ -1,0 +1,55 @@
+{
+  "name": "RootRecord",
+  "type": "developer-documentation",
+  "version": "1.0.0",
+  "description": "Machine-readable index for Solana-related discovery. RootRecord’s public Solana UX lives at solana.rootrecord.info; this file documents how the stack relates to on-chain programs and peers—not wallet addresses or keys.",
+  "urls": {
+    "marketing": "https://rootrecord.info",
+    "primaryApi": "https://api.rootrecord.info",
+    "solanaTools": "https://solana.rootrecord.info",
+    "solanaToolsSource": "https://github.com/RootRecord/solana-rootrecord-site",
+    "documentationRepo": "https://github.com/RootRecord/Doc-Repo"
+  },
+  "transactionSemantics": {
+    "versionedTransactions": true,
+    "notes": "The canonical Solana Tools app (solana-rootrecord-site) uses @solana/web3.js paths that include VersionedTransaction for wallet signing and Raydium CPMM liquidity flows. Legacy Transaction types may still appear at compatibility boundaries. Address Lookup Tables follow whatever Raydium / invoked programs require at execution time—they are not separately marketed as a RootRecord product surface."
+  },
+  "solanaEcosystemIntegration": {
+    "programsAndStandards": [
+      {
+        "name": "Raydium CPMM",
+        "usage": "Liquidity: pool creation, add/remove liquidity in Solana Tools (user-signed; program fees on-chain)."
+      },
+      {
+        "name": "SPL Token & Token-2022",
+        "usage": "Token creation, transfers, and related flows in Solana Tools; Token Manager app uses client-side @solana/spl-token patterns."
+      },
+      {
+        "name": "Metaplex token metadata",
+        "usage": "Metadata and listing flows where implemented in Solana Tools (see upstream repo)."
+      }
+    ],
+    "aggregatorsAndApis": [
+      {
+        "name": "Jupiter",
+        "usage": "Price hints and routing references in Solana Tools UI/docs—not the data source for Weather Manager (weather is off-chain APIs)."
+      }
+    ],
+    "notUsedForWeather": [
+      {
+        "name": "Pyth Network",
+        "note": "RootRecord Weather Manager uses conventional weather providers and NOAA-style ingest via the primary Worker—not Pyth price/oracle feeds for forecasts."
+      }
+    ]
+  },
+  "relatedProducts": [
+    {
+      "name": "RootRecord Weather Manager",
+      "solanaRelation": "Accounts and optional earn surfaces; weather data itself is not an on-chain oracle feed."
+    },
+    {
+      "name": "RootRecord Token Manager (mobile)",
+      "solanaRelation": "Non-custodial Phantom-style flows; SPL reads/sends from device."
+    }
+  ]
+}

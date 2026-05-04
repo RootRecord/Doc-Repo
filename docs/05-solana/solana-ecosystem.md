@@ -21,6 +21,10 @@ Exact mint addresses and decimals appear as env vars (e.g. `RRTT_MINT_BASE58`). 
 
 Several routes notify Discord webhooks for operational visibility (new mints, tooling logs). These are **not** user features—they’re engineering telemetry surfaces.
 
+## Ecosystem “neighbor” map
+
+For **named programs / APIs** (Raydium, Jupiter, SPL, Metaplex) and **versioned transaction** posture—written for search tools and Solana-focused crawlers—see the repo root **[`solana.json`](../../solana.json)** and the README section **Ecosystem integration (Solana)**.
+
 ## Related reading
 
 - [solana-tools-site.md](solana-tools-site.md)

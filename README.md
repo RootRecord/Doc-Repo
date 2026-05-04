@@ -21,6 +21,18 @@ This repository is meant to **teach**. It is not a substitute for runbooks insid
 
 **One-page lookup:** [Quick reference](docs/09-reference/quick-reference.md) (URLs, repos, integration matrix, GitHub topic tags).
 
+**Solana ecosystem index (machine-readable):** [`solana.json`](solana.json) at repo root—programs, APIs, and transaction semantics for crawler/tooling discovery.
+
+---
+
+## Ecosystem integration (Solana)
+
+RootRecord’s **browser Solana surface** is **[solana.rootrecord.info](https://solana.rootrecord.info)**, shipped from [`RootRecord/solana-rootrecord-site`](https://github.com/RootRecord/solana-rootrecord-site). That stack interacts with **Raydium CPMM** (liquidity), **SPL Token / Token-2022**, **Metaplex-style metadata** where applicable, and references **Jupiter** for **price / routing context** in the product UI—not as the backend for **Weather Manager**. Weather forecasts and hazard feeds come from **conventional weather ingest** (e.g. NOAA-style alerts, provider APIs) via **`api.rootrecord.info`**, **not** Pyth Network oracle feeds.
+
+**Technical posture:** the Solana Tools codebase uses **versioned (v0) transactions** through **`@solana/web3.js`** (`VersionedTransaction`) for modern wallet and Raydium-related flows. **Address Lookup Tables** are not positioned as a separate product feature; when Raydium or other invoked programs require LUTs, those are handled by the program transaction shapes at execution time.
+
+For a concise JSON summary of the above (neighbor entities + specs), see **[`solana.json`](solana.json)**.
+
 ---
 
 ## Quick glossary (brand ↔ meaning)
@@ -100,6 +112,7 @@ RootRecord runs Solana-adjacent product surfaces: non-custodial Token Manager fl
 
 - [Solana in the RootRecord stack](docs/05-solana/solana-ecosystem.md)
 - [Solana Tools public site](docs/05-solana/solana-tools-site.md)
+- Ecosystem index: [`solana.json`](solana.json) (programs, neighbor APIs, versioned tx notes)
 
 ### 6. Development — clone, branch, build
 

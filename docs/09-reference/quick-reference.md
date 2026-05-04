@@ -33,6 +33,10 @@ One-page lookup for URLs, source repos, and integration touchpoints. For narrati
 | **Resend (optional)** | `RESEND_*` on Worker | Transactional email where enabled |
 | **Vercel / forward URL** | `SOLANA_TOOLS_API_FORWARD_URL` | Proxy selected Next-only API routes for Solana hostname |
 
+## `solana.json` (ecosystem discovery)
+
+Repo root **[`solana.json`](../../solana.json)** lists Solana programs/API neighbors, versioned-transaction notes, and explicit **non-use** of Pyth for weather (weather uses conventional ingest via the primary API).
+
 ## GitHub repository topics (discovery)
 
 Intended **topic tags** for this Doc Repo (mirror on the repo **About → Topics**):  

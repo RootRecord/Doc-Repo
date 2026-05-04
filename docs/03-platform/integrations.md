@@ -35,6 +35,8 @@ Clients must not embed secret keys; **server-side** Workers hold `STRIPE_SECRET_
 | **Treasury / custodial programs** | Separate keys and crons—high-privilege; documented in code and ops runbooks, not here. |
 | **Solana Tools Next.js** | Hosted separately (e.g. Vercel); primary Worker may **forward** selected `/api/*` paths via `SOLANA_TOOLS_API_FORWARD_URL`. |
 
+Named ecosystem touchpoints (Raydium CPMM, SPL, Metaplex, Jupiter references in UI) and **versioned transaction** usage are summarized for tooling in repo root **`solana.json`**—not duplicated here in full.
+
 ## Weather & hazard data
 
 | Source | Role |
