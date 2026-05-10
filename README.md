@@ -202,13 +202,14 @@ Compact answers plus **dense tables** for endpoints, repos, and integrations—o
 
 ### 11. Deep dives — architecture & mechanics
 
-Longer explainers: Mermaid map, HTTP lifecycle in the Worker, earn semantics, FCM, Stripe, D1 migrations, and version floors for Android.
+Longer explainers: Mermaid map, HTTP lifecycle in the Worker, earn semantics, FCM, Stripe, D1 migrations, version floors for Android, and **Hawaiʻi volcano / Kīlauea-style alerts** in the weather bundle.
 
 - [Architecture map (Mermaid)](docs/10-deep-dives/architecture-map.md)
 - [HTTP request lifecycle](docs/10-deep-dives/request-lifecycle.md)
 - [Compare RootRecord — Solana tools vs legacy launchers](docs/10-deep-dives/compare-rootrecord-solana-tools.md)
 - [Product comparison table](docs/10-deep-dives/product-comparison-table.md)
 - [Weather data pipeline](docs/10-deep-dives/weather-data-pipeline.md)
+- [Kīlauea & volcano alerts (public)](docs/10-deep-dives/kilauea-and-volcano-alerts.md)
 - [Business data model](docs/10-deep-dives/business-data-model.md)
 - [Earn & rewards](docs/10-deep-dives/earn-and-rewards.md)
 - [Internal vs external Solana keys](docs/10-deep-dives/internal-vs-external-solana.md)

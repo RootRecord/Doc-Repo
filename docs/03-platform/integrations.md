@@ -41,8 +41,9 @@ Named **2026 ecosystem neighbors** (e.g. **Jupiter** price/Jupiter Wallet paths,
 
 | Source | Role |
 |--------|------|
-| **NOAA-related ingest** | Alerts and bundles via Worker modules and crons. |
-| **Commercial providers (e.g. AccuWeather)** | Keys via Worker secrets; TTL reuse reduces duplicate calls. |
+| **NOAA / NWS** | Active **point** alerts (`api.weather.gov`) feed the dashboard **`alerts`** field when AccuWeather is not used for that path—including coordinated volcanic ash or related products where issued for the location. |
+| **Commercial providers (e.g. AccuWeather)** | Keys via Worker secrets; TTL reuse reduces duplicate calls. The alerts endpoint can surface **government-style volcano products** (e.g. **VOW** / **VOWS** / **VOA** codes) merged into AccuWeather’s schema; see [Kīlauea & volcano alerts](../10-deep-dives/kilauea-and-volcano-alerts.md). |
+| **USGS (indirect)** | RootRecord does **not** query USGS APIs as a dedicated volcano-only pipe—volcano items appear when **NWS** or **aggregated commercial alert** pathways include them. |
 
 ## Ops & feedback
 

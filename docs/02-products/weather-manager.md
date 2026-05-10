@@ -6,7 +6,7 @@
 
 - **Timely alerts** — NOAA and related feeds power alert-style experiences (implementation details live in the Worker `weather` modules and cron jobs).
 - **Current + forecast** — Grid-based or provider-backed weather content depending on configuration (AccuWeather keys, TTL caches, etc.).
-- **Environmental signals** — The primary Worker also bundles routes for earthquakes, wildfires, cyclones, tsunami bulletins, and related dashboards—useful for “big picture” hazard tracking.
+- **Environmental signals** — The primary Worker also bundles routes for earthquakes, wildfires, cyclones, tsunami bulletins, and related dashboards—useful for “big picture” hazard tracking. **Volcano-related alerts** (for example notices affecting **Kīlauea** on Hawaiʻi Island) appear through the same **`alerts`** field as other hazards when upstream feeds include them—see [Kīlauea & volcano alerts](../10-deep-dives/kilauea-and-volcano-alerts.md).
 
 ## How it talks to the cloud
 
@@ -24,3 +24,4 @@ Explain **location permission** in plain language: it powers relevant grids and 
 
 - Crons for ingest jobs: [../07-operations/crons-and-background-jobs.md](../07-operations/crons-and-background-jobs.md)
 - API overview: [../03-platform/api-overview.md](../03-platform/api-overview.md)
+- Kīlauea & volcano alerts (public): [../10-deep-dives/kilauea-and-volcano-alerts.md](../10-deep-dives/kilauea-and-volcano-alerts.md)
